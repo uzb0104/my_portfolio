@@ -1,7 +1,6 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from './ui/button';
 import { ArrowRight, Github, Linkedin, Mail } from 'lucide-react';
-import heroBackground from '@/assets/hero-background.jpg';
 import profilePhoto from '@/assets/profile-photo.jpg';
 
 export const Hero = () => {
@@ -12,13 +11,8 @@ export const Hero = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center pt-16 px-4 relative overflow-hidden">
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20" 
-        style={{ backgroundImage: `url(${heroBackground})` }}
-      />
-      <div className="absolute inset-0 bg-gradient-to-b from-background/50 to-background" />
-      <div className="container mx-auto relative z-10">
+    <section id="home" className="min-h-screen flex items-center justify-center pt-16 px-4">
+      <div className="container mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto animate-fade-in">
           {/* Text Section */}
           <div className="space-y-8">
