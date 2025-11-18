@@ -17,12 +17,14 @@ export const Hero = () => {
           {/* Image Section */}
           <div className="flex justify-center md:justify-start">
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl blur-3xl" />
-              <img 
-                src={profilePhoto} 
-                alt="Profile" 
-                className="relative rounded-2xl shadow-2xl w-full max-w-md hover-lift"
-              />
+              <div className="absolute inset-0 bg-gradient-to-br from-primary via-secondary to-accent rounded-full blur-2xl opacity-30" />
+              <div className="relative p-1 bg-gradient-to-br from-primary via-secondary to-accent rounded-full">
+                <img 
+                  src={profilePhoto} 
+                  alt="Profile" 
+                  className="rounded-full shadow-2xl w-full max-w-md hover-lift border-4 border-background"
+                />
+              </div>
             </div>
           </div>
 
