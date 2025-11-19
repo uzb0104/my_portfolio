@@ -14,20 +14,6 @@ export const Hero = () => {
     <section id="home" className="min-h-screen flex items-center justify-center pt-16 px-4">
       <div className="container mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto animate-fade-in">
-          {/* Image Section */}
-          <div className="flex justify-center md:justify-start">
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary via-secondary to-accent rounded-full blur-2xl opacity-30" />
-              <div className="relative p-1 bg-gradient-to-br from-primary via-secondary to-accent rounded-full">
-                <img 
-                  src={profilePhoto} 
-                  alt="Profile" 
-                  className="rounded-full shadow-2xl w-full max-w-md hover-lift border-4 border-background"
-                />
-              </div>
-            </div>
-          </div>
-
           {/* Text Section */}
           <div className="space-y-8">
             <div className="space-y-4">
@@ -85,6 +71,25 @@ export const Hero = () => {
                  className="p-3 rounded-full border hover:bg-accent transition-colors hover-lift">
                 <Mail className="h-5 w-5" />
               </a>
+            </div>
+          </div>
+
+          {/* Image Section */}
+          <div className="flex justify-center md:justify-end">
+            <div className="relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl blur-3xl" />
+              <div className="relative">
+                <img 
+                  src={profilePhoto} 
+                  alt="Profile" 
+                  className="relative rounded-2xl shadow-2xl w-full max-w-md hover-lift"
+                />
+                {/* Corner borders */}
+                <div className="absolute top-0 left-0 w-8 h-8 border-t-4 border-l-4 border-primary rounded-tl-2xl" />
+                <div className="absolute top-0 right-0 w-8 h-8 border-t-4 border-r-4 border-primary rounded-tr-2xl" />
+                <div className="absolute bottom-0 left-0 w-8 h-8 border-b-4 border-l-4 border-primary rounded-bl-2xl" />
+                <div className="absolute bottom-0 right-0 w-8 h-8 border-b-4 border-r-4 border-primary rounded-br-2xl" />
+              </div>
             </div>
           </div>
         </div>
