@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/
 import { Badge } from './ui/badge';
 import { ExternalLink, Github } from 'lucide-react';
 import { Button } from './ui/button';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from './ui/carousel';
 
 const projects = [
   {
@@ -37,6 +38,61 @@ const projects = [
     },
     tech: ['React', 'Redux', 'Firebase', 'Material-UI'],
     image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=500&fit=crop'
+  },
+  {
+    id: 4,
+    title: { uz: "Social Media Dashboard", en: "Social Media Dashboard", ru: "Панель социальных сетей" },
+    description: {
+      uz: "Ijtimoiy tarmoqlar uchun boshqaruv paneli. Statistika, post rejalashtirish va analytics.",
+      en: "Social media management dashboard with statistics, post scheduling and analytics.",
+      ru: "Панель управления социальными сетями со статистикой, планированием постов и аналитикой."
+    },
+    tech: ['Next.js', 'TypeScript', 'Chart.js', 'Node.js'],
+    image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=500&fit=crop'
+  },
+  {
+    id: 5,
+    title: { uz: "Weather App", en: "Weather App", ru: "Погодное приложение" },
+    description: {
+      uz: "Real-time ob-havo ma'lumotlari. 7 kunlik prognoz va joylashuv bo'yicha qidiruv.",
+      en: "Real-time weather data with 7-day forecast and location search.",
+      ru: "Данные о погоде в реальном времени с 7-дневным прогнозом и поиском по местоположению."
+    },
+    tech: ['React', 'OpenWeather API', 'Geolocation', 'CSS'],
+    image: 'https://images.unsplash.com/photo-1592210454359-9043f067919b?w=800&h=500&fit=crop'
+  },
+  {
+    id: 6,
+    title: { uz: "Blog Platform", en: "Blog Platform", ru: "Блог Платформа" },
+    description: {
+      uz: "Blog yozish va boshqarish platformasi. Markdown editor va ko'p foydalanuvchi.",
+      en: "Blog writing and management platform with markdown editor and multi-user support.",
+      ru: "Платформа для написания и управления блогами с markdown редактором и многопользовательской поддержкой."
+    },
+    tech: ['React', 'Node.js', 'MongoDB', 'Express'],
+    image: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&h=500&fit=crop'
+  },
+  {
+    id: 7,
+    title: { uz: "Fitness Tracker", en: "Fitness Tracker", ru: "Фитнес Трекер" },
+    description: {
+      uz: "Jismoniy mashqlarni kuzatish ilovasi. Mashqlar rejasi va progress monitoring.",
+      en: "Fitness tracking app with workout plans and progress monitoring.",
+      ru: "Приложение для отслеживания фитнеса с планами тренировок и мониторингом прогресса."
+    },
+    tech: ['React Native', 'Firebase', 'Redux', 'Charts'],
+    image: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&h=500&fit=crop'
+  },
+  {
+    id: 8,
+    title: { uz: "Chat Application", en: "Chat Application", ru: "Чат Приложение" },
+    description: {
+      uz: "Real-time chat ilovasi. Guruh xabarlari, file sharing va video qo'ng'iroqlar.",
+      en: "Real-time chat app with group messaging, file sharing and video calls.",
+      ru: "Чат-приложение в реальном времени с групповыми сообщениями, обменом файлами и видеозвонками."
+    },
+    tech: ['React', 'Socket.io', 'WebRTC', 'Node.js'],
+    image: 'https://images.unsplash.com/photo-1611606063065-ee7946f0787a?w=800&h=500&fit=crop'
   }
 ];
 
@@ -63,39 +119,53 @@ export const Projects = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
-            <Card key={project.id} className="overflow-hidden hover-lift group">
-              <div className="relative overflow-hidden h-48">
-                <img 
-                  src={project.image} 
-                  alt={t(project.title)}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                />
-              </div>
-              <CardHeader>
-                <CardTitle>{t(project.title)}</CardTitle>
-                <CardDescription>{t(project.description)}</CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="flex flex-wrap gap-2">
-                  {project.tech.map((tech) => (
-                    <Badge key={tech} variant="secondary">{tech}</Badge>
-                  ))}
-                </div>
-                <div className="flex gap-2">
-                  <Button size="sm" variant="outline" className="gap-2 flex-1">
-                    <Github className="h-4 w-4" />
-                    Code
-                  </Button>
-                  <Button size="sm" className="gap-2 flex-1">
-                    <ExternalLink className="h-4 w-4" />
-                    Demo
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+        <div className="max-w-6xl mx-auto">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-4">
+              {projects.map((project) => (
+                <CarouselItem key={project.id} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                  <Card className="overflow-hidden hover-lift group h-full">
+                    <div className="relative overflow-hidden h-48">
+                      <img 
+                        src={project.image} 
+                        alt={t(project.title)}
+                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                      />
+                    </div>
+                    <CardHeader>
+                      <CardTitle>{t(project.title)}</CardTitle>
+                      <CardDescription>{t(project.description)}</CardDescription>
+                    </CardHeader>
+                    <CardContent className="space-y-4">
+                      <div className="flex flex-wrap gap-2">
+                        {project.tech.map((tech) => (
+                          <Badge key={tech} variant="secondary">{tech}</Badge>
+                        ))}
+                      </div>
+                      <div className="flex gap-2">
+                        <Button variant="outline" size="sm" className="gap-2">
+                          <Github className="h-4 w-4" />
+                          {t({ uz: "Kod", en: "Code", ru: "Код" })}
+                        </Button>
+                        <Button size="sm" className="gap-2">
+                          <ExternalLink className="h-4 w-4" />
+                          {t({ uz: "Demo", en: "Demo", ru: "Демо" })}
+                        </Button>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </div>
       </div>
     </section>
