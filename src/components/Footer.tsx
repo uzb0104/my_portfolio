@@ -1,5 +1,5 @@
 import { useLanguage } from '@/contexts/LanguageContext';
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Github, Linkedin, Instagram, Send } from 'lucide-react';
 
 export const Footer = () => {
   const { t } = useLanguage();
@@ -18,9 +18,13 @@ export const Footer = () => {
                className="p-2 rounded-full hover:bg-accent transition-colors">
               <Linkedin className="h-5 w-5" />
             </a>
-            <a href="mailto:example@email.com"
+            <a href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer"
                className="p-2 rounded-full hover:bg-accent transition-colors">
-              <Mail className="h-5 w-5" />
+              <Send className="h-5 w-5" />
+            </a>
+            <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer"
+               className="p-2 rounded-full hover:bg-accent transition-colors">
+              <Instagram className="h-5 w-5" />
             </a>
           </div>
           
