@@ -62,7 +62,7 @@ export const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold mb-1">Email</h3>
-                  <p className="text-sm text-muted-foreground">example@email.com</p>
+                  <p className="text-sm text-muted-foreground">abbosbekomonov04@gmail.com</p>
                 </div>
               </CardContent>
             </Card>
@@ -76,7 +76,7 @@ export const Contact = () => {
                   <h3 className="font-semibold mb-1">
                     {t({ uz: "Telefon", en: "Phone", ru: "Телефон" })}
                   </h3>
-                  <p className="text-sm text-muted-foreground">+998 90 123 45 67</p>
+                  <p className="text-sm text-muted-foreground">+998 99 4540104</p>
                 </div>
               </CardContent>
             </Card>
@@ -92,9 +92,9 @@ export const Contact = () => {
                   </h3>
                   <p className="text-sm text-muted-foreground">
                     {t({
-                      uz: "Toshkent, O'zbekiston",
-                      en: "Tashkent, Uzbekistan",
-                      ru: "Ташкент, Узбекистан"
+                      uz: "Jizzax, O'zbekiston",
+                      en: "Jizzakh Uzbekistan",
+                      ru: "Jizzax, Узбекистан"
                     })}
                   </p>
                 </div>

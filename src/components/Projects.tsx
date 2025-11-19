@@ -8,7 +8,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 const projects = [
   {
     id: 1,
-    title: { uz: "E-commerce Platformasi", en: "E-commerce Platform", ru: "E-commerce Платформа" },
+    title: { uz: "Watch shopping", en: "Watch shopping", ru: "Watch shopping Платформа" },
     description: {
       uz: "To'liq funksional onlayn do'kon. Mahsulotlar katalogi, savatcha va to'lov tizimi bilan.",
       en: "Full-featured online store with product catalog, cart and payment system.",
@@ -30,9 +30,9 @@ const projects = [
   },
   {
     id: 3,
-    title: { uz: "Task Management App", en: "Task Management App", ru: "Приложение для задач" },
+    title: { uz: "Netflix clone", en: "Netflix clone", ru: "Netflix clone" },
     description: {
-      uz: "Vazifalarni boshqarish ilovasi. Drag & drop, filtrlash va real-time yangilanishlar.",
+      uz: "Netflix clone ilovasi. Drag & drop, filtrlash va real-time yangilanishlar.",
       en: "Task management app with drag & drop, filtering and real-time updates.",
       ru: "Приложение для управления задачами с drag & drop, фильтрацией и обновлениями в реальном времени."
     },
@@ -47,7 +47,7 @@ const projects = [
       en: "Social media management dashboard with statistics, post scheduling and analytics.",
       ru: "Панель управления социальными сетями со статистикой, планированием постов и аналитикой."
     },
-    tech: ['Next.js', 'TypeScript', 'Chart.js', 'Node.js'],
+    tech: ['', 'TypeScript', 'React.js', 'Node.js'],
     image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=500&fit=crop'
   },
   {
@@ -63,7 +63,7 @@ const projects = [
   },
   {
     id: 6,
-    title: { uz: "Blog Platform", en: "Blog Platform", ru: "Блог Платформа" },
+    title: { uz: "ShareWisdom", en: "ShareWisdom Platform", ru: "ShareWisdom Платформа" },
     description: {
       uz: "Blog yozish va boshqarish platformasi. Markdown editor va ko'p foydalanuvchi.",
       en: "Blog writing and management platform with markdown editor and multi-user support.",
@@ -74,13 +74,13 @@ const projects = [
   },
   {
     id: 7,
-    title: { uz: "Fitness Tracker", en: "Fitness Tracker", ru: "Фитнес Трекер" },
+    title: { uz: "Gofit", en: "Gofit", ru: "Gofit" },
     description: {
       uz: "Jismoniy mashqlarni kuzatish ilovasi. Mashqlar rejasi va progress monitoring.",
       en: "Fitness tracking app with workout plans and progress monitoring.",
       ru: "Приложение для отслеживания фитнеса с планами тренировок и мониторингом прогресса."
     },
-    tech: ['React Native', 'Firebase', 'Redux', 'Charts'],
+    tech: ['React', 'Type Script', 'Firebase', 'Redux', 'Charts'],
     image: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&h=500&fit=crop'
   },
   {
@@ -132,8 +132,8 @@ export const Projects = () => {
                 <CarouselItem key={project.id} className="pl-4 md:basis-1/2 lg:basis-1/3">
                   <Card className="overflow-hidden hover-lift group h-full">
                     <div className="relative overflow-hidden h-48">
-                      <img 
-                        src={project.image} 
+                      <img
+                        src={project.image}
                         alt={t(project.title)}
                         className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                       />
@@ -149,14 +149,20 @@ export const Projects = () => {
                         ))}
                       </div>
                       <div className="flex gap-2">
-                        <Button variant="outline" size="sm" className="gap-2">
-                          <Github className="h-4 w-4" />
-                          {t({ uz: "Kod", en: "Code", ru: "Код" })}
-                        </Button>
-                        <Button size="sm" className="gap-2">
-                          <ExternalLink className="h-4 w-4" />
-                          {t({ uz: "Demo", en: "Demo", ru: "Демо" })}
-                        </Button>
+                        <a href="https://github.com/uzb0104?tab=overview&from=2025-09-01&to=2025-09-30">
+
+                          <Button variant="outline" size="sm" className="gap-2">
+                            <Github className="h-4 w-4" />
+                            {t({ uz: "Kod", en: "Code", ru: "Код" })}
+                          </Button>
+                        </a>
+                        <a href="https://gofit-khaki.vercel.app/adminprofile">
+
+                          <Button size="sm" className="gap-2">
+                            <ExternalLink className="h-4 w-4" />
+                            {t({ uz: "Demo", en: "Demo", ru: "Демо" })}
+                          </Button>
+                        </a>
                       </div>
                     </CardContent>
                   </Card>

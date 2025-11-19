@@ -2,15 +2,15 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Card, CardContent } from './ui/card';
 
 const skills = [
-  { name: 'React', level: 95, category: 'frontend' },
-  { name: 'TypeScript', level: 90, category: 'frontend' },
-  { name: 'JavaScript', level: 95, category: 'frontend' },
-  { name: 'Tailwind CSS', level: 92, category: 'frontend' },
+  { name: 'React', level: 90, category: 'frontend' },
+  { name: 'TypeScript', level: 85, category: 'frontend' },
+  { name: 'JavaScript', level: 80, category: 'frontend' },
+  { name: 'Tailwind CSS', level: 80, category: 'frontend' },
   { name: 'HTML/CSS', level: 98, category: 'frontend' },
-  { name: 'Next.js', level: 85, category: 'frontend' },
-  { name: 'Redux', level: 88, category: 'frontend' },
-  { name: 'Git', level: 90, category: 'tools' },
-  { name: 'Figma', level: 80, category: 'design' },
+  { name: 'Next.js', level: 35, category: 'frontend' },
+  { name: 'Redux', level: 75, category: 'frontend' },
+  { name: 'Git', level: 80, category: 'tools' },
+  { name: 'Figma', level: 85, category: 'design' },
   { name: 'Responsive Design', level: 95, category: 'design' },
 ];
 
@@ -46,7 +46,7 @@ export const Skills = () => {
                   <span className="text-sm text-muted-foreground">{skill.level}%</span>
                 </div>
                 <div className="h-2 bg-secondary rounded-full overflow-hidden">
-                  <div 
+                  <div
                     className="h-full bg-gradient-to-r from-primary to-accent transition-all duration-1000 ease-out"
                     style={{ width: `${skill.level}%` }}
                   />

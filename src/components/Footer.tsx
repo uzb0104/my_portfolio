@@ -10,24 +10,24 @@ export const Footer = () => {
       <div className="container mx-auto">
         <div className="flex flex-col items-center space-y-6">
           <div className="flex items-center gap-4">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" 
-               className="p-2 rounded-full hover:bg-accent transition-colors">
+            <a href="https://github.com/uzb0104" target="_blank" rel="noopener noreferrer"
+              className="p-2 rounded-full hover:bg-accent transition-colors">
               <Github className="h-5 w-5" />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
-               className="p-2 rounded-full hover:bg-accent transition-colors">
+            <a href="https://www.linkedin.com/in/abbosbek-omonov/" target="_blank" rel="noopener noreferrer"
+              className="p-2 rounded-full hover:bg-accent transition-colors">
               <Linkedin className="h-5 w-5" />
             </a>
-            <a href="https://t.me/yourusername" target="_blank" rel="noopener noreferrer"
-               className="p-2 rounded-full hover:bg-accent transition-colors">
+            <a href="https://t.me/a_omonov01" target="_blank" rel="noopener noreferrer"
+              className="p-2 rounded-full hover:bg-accent transition-colors">
               <Send className="h-5 w-5" />
             </a>
-            <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer"
-               className="p-2 rounded-full hover:bg-accent transition-colors">
+            <a href="https://www.instagram.com/omonov_abbosbek?igsh=MXByb3VuanhncmxscQ==" target="_blank" rel="noopener noreferrer"
+              className="p-2 rounded-full hover:bg-accent transition-colors">
               <Instagram className="h-5 w-5" />
             </a>
           </div>
-          
+
           <p className="text-sm text-muted-foreground text-center">
             © {currentYear} {t({
               uz: "Barcha huquqlar himoyalangan",

@@ -59,16 +59,16 @@ export const Hero = () => {
             </div>
 
             <div className="flex items-center gap-4">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" 
-                 className="p-3 rounded-full border hover:bg-accent transition-colors hover-lift">
+              <a href="https://github.com/uzb0104" target="_blank" rel="noopener noreferrer"
+                className="p-3 rounded-full border hover:bg-accent transition-colors hover-lift">
                 <Github className="h-5 w-5" />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
-                 className="p-3 rounded-full border hover:bg-accent transition-colors hover-lift">
+              <a href="https://www.linkedin.com/in/abbosbek-omonov/" target="_blank" rel="noopener noreferrer"
+                className="p-3 rounded-full border hover:bg-accent transition-colors hover-lift">
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="mailto:example@email.com"
-                 className="p-3 rounded-full border hover:bg-accent transition-colors hover-lift">
+              <a href="abbosbekomonov04@gmail.com"
+                className="p-3 rounded-full border hover:bg-accent transition-colors hover-lift">
                 <Mail className="h-5 w-5" />
               </a>
             </div>
@@ -79,9 +79,9 @@ export const Hero = () => {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl blur-3xl" />
               <div className="relative">
-                <img 
-                  src={profilePhoto} 
-                  alt="Profile" 
+                <img
+                  src={profilePhoto}
+                  alt="Profile"
                   className="relative rounded-2xl shadow-2xl w-full max-w-md hover-lift"
                 />
                 {/* Corner borders */}

@@ -18,7 +18,7 @@ export const About = () => {
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             {t({
-              uz: "Passionli frontend dasturchi, foydalanuvchi tajribasiga e'tibor beruvchi",
+              uz: "Men Omonov Abbos Alisher o'g'li Frontend dasturchiman",
               en: "Passionate frontend developer focused on user experience",
               ru: "Увлеченный frontend разработчик, ориентированный на пользовательский опыт"
             })}
@@ -29,9 +29,9 @@ export const About = () => {
           <div className="prose prose-lg dark:prose-invert mx-auto text-center">
             <p className="text-muted-foreground">
               {t({
-                uz: "Men 3+ yillik tajribaga ega frontend dasturchiman. Zamonaviy va foydalanuvchi uchun qulay web ilovalar yaratishni yaxshi ko'raman. React, TypeScript va zamonaviy texnologiyalar bilan ishlash — mening kuchli tomonlarim. Har bir loyihada innovatsiya va mukammallikka intilaman.",
-                en: "I'm a frontend developer with 3+ years of experience. I love creating modern and user-friendly web applications. Working with React, TypeScript and modern technologies is my strong suit. I strive for innovation and excellence in every project.",
-                ru: "Я frontend разработчик с более чем 3-летним опытом. Люблю создавать современные и удобные веб-приложения. Работа с React, TypeScript и современными технологиями — моя сильная сторона. Стремлюсь к инновациям и совершенству в каждом проекте."
+                uz: "Men Abbosbek Omonov — 1 yillik tajribaga ega frontend dasturchiman. React, TypeScript va zamonaviy web texnologiyalari bilan qulay, tezkor va ishonchli web ilovalar yarataman Toza kod, chiroyli UI/UX va barqaror arxitektura — mening ustuvor yo‘nalishim. Real loyihalarda sport platformalari, boshqaruv tizimlari va turli CRUD xizmatlarini ishlab chiqqanman. Texnologiyalar orqali real muammolarga yechim yaratish va doimiy rivojlanish — mening asosiy maqsadim.",
+                en: "I'm a frontend developer with 1 years of experience. I love creating modern and user-friendly web applications. Working with React, TypeScript and modern technologies is my strong suit. I strive for innovation and excellence in every project.",
+                ru: "Я frontend разработчик с более чем 1-летним опытом. Люблю создавать современные и удобные веб-приложения. Работа с React, TypeScript и современными технологиями — моя сильная сторона. Стремлюсь к инновациям и совершенству в каждом проекте."
               })}
             </p>
           </div>
@@ -43,7 +43,7 @@ export const About = () => {
                   <Briefcase className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-2xl">3+</h3>
+                  <h3 className="font-bold text-2xl">1</h3>
                   <p className="text-muted-foreground">
                     {t({
                       uz: "Yillik Tajriba",
@@ -61,7 +61,7 @@ export const About = () => {
                   <Award className="h-6 w-6 text-accent" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-2xl">20+</h3>
+                  <h3 className="font-bold text-2xl">10</h3>
                   <p className="text-muted-foreground">
                     {t({
                       uz: "Tugallangan Loyihalar",
@@ -79,7 +79,7 @@ export const About = () => {
                   <GraduationCap className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-2xl">10+</h3>
+                  <h3 className="font-bold text-2xl">4</h3>
                   <p className="text-muted-foreground">
                     {t({
                       uz: "Sertifikatlar",
