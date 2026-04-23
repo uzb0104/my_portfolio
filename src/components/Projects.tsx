@@ -14,7 +14,7 @@ const projects = [
       en: "Full-featured online store with product catalog, cart and payment system.",
       ru: "Полнофункциональный интернет-магазин с каталогом товаров, корзиной и системой оплаты."
     },
-    tech: ['React', 'TypeScript', 'Tailwind', 'Stripe'],
+    tech: ['React', 'TypeScript', 'Tailwind', 'Supabase'],
     image: 'https://images.unsplash.com/photo-1661956602116-aa6865609028?w=800&h=500&fit=crop'
   },
   {
@@ -91,7 +91,7 @@ const projects = [
       en: "Real-time chat app with group messaging, file sharing and video calls.",
       ru: "Чат-приложение в реальном времени с групповыми сообщениями, обменом файлами и видеозвонками."
     },
-    tech: ['React', 'Socket.io', 'WebRTC', 'Node.js'],
+    tech: ['React', 'TypeScript', 'Node.js'],
     image: 'https://images.unsplash.com/photo-1611606063065-ee7946f0787a?w=800&h=500&fit=crop'
   }
 ];
@@ -149,18 +149,10 @@ export const Projects = () => {
                         ))}
                       </div>
                       <div className="flex gap-2">
-                        <a href="https://github.com/uzb0104?tab=overview&from=2025-09-01&to=2025-09-30">
-
+                        <a href="https://github.com/uzb0104">
                           <Button variant="outline" size="sm" className="gap-2">
                             <Github className="h-4 w-4" />
                             {t({ uz: "Kod", en: "Code", ru: "Код" })}
-                          </Button>
-                        </a>
-                        <a href="https://gofit-khaki.vercel.app/adminprofile">
-
-                          <Button size="sm" className="gap-2">
-                            <ExternalLink className="h-4 w-4" />
-                            {t({ uz: "Demo", en: "Demo", ru: "Демо" })}
                           </Button>
                         </a>
                       </div>

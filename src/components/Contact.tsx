@@ -6,6 +6,7 @@ import { Button } from './ui/button';
 import { Mail, MapPin, Phone } from 'lucide-react';
 import { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
+import { supabase } from '@/lib/supabase';
 
 export const Contact = () => {
   const { t } = useLanguage();
@@ -15,9 +16,35 @@ export const Contact = () => {
     email: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
+
+    const { error } = await supabase.from('messages').insert([
+      {
+        name: formData.name,
+        email: formData.email,
+        message: formData.message
+      }
+    ]);
+
+    setIsSubmitting(false);
+
+    if (error) {
+      toast({
+        title: t({
+          uz: 'Xatolik yuz berdi',
+          en: 'Something went wrong',
+          ru: 'Произошла ошибка'
+        }),
+        description: error.message,
+        variant: 'destructive'
+      });
+      return;
+    }
+
     toast({
       title: t({
         uz: "Xabar yuborildi!",
@@ -30,6 +57,7 @@ export const Contact = () => {
         ru: "Мы свяжемся с вами в ближайшее время."
       })
     });
+
     setFormData({ name: '', email: '', message: '' });
   };
 
@@ -140,12 +168,10 @@ export const Contact = () => {
                     required
                   />
                 </div>
-                <Button type="submit" size="lg" className="w-full">
-                  {t({
-                    uz: "Yuborish",
-                    en: "Send Message",
-                    ru: "Отправить"
-                  })}
+                <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
+                  {isSubmitting
+                    ? t({ uz: 'Yuborilmoqda...', en: 'Sending...', ru: 'Отправка...' })
+                    : t({ uz: 'Yuborish', en: 'Send Message', ru: 'Отправить' })}
                 </Button>
               </form>
             </CardContent>

@@ -98,7 +98,7 @@ export const Testimonials = () => {
   return (
     <section id="testimonials" className="py-20 px-4">
       <div className="container mx-auto">
-        <div className="text-center mb-12 animate-fade-in">
+        {/* <div className="text-center mb-12 animate-fade-in">
           <h2 className="text-4xl font-bold mb-4">
             {t({
               uz: "Mijozlar Fikrlari",
@@ -113,7 +113,7 @@ export const Testimonials = () => {
               ru: "Что говорят мои клиенты о работе со мной"
             })}
           </p>
-        </div>
+        </div> */}
 
         <Carousel
           opts={{
@@ -125,7 +125,7 @@ export const Testimonials = () => {
           <CarouselContent>
             {testimonials.map((testimonial, index) => (
               <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/2">
-                <div className="p-1">
+                {/* <div className="p-1">
                   <Card className="h-full hover-lift">
                     <CardContent className="p-6 space-y-4">
                       <div className="flex gap-1">
@@ -153,7 +153,7 @@ export const Testimonials = () => {
                       </div>
                     </CardContent>
                   </Card>
-                </div>
+                </div> */}
               </CarouselItem>
             ))}
           </CarouselContent>
