@@ -2,6 +2,11 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { ExternalLink, Github } from 'lucide-react';
 import { Badge } from './ui/badge';
 
+import logcrmImg from '@/assets/logcrm.png';
+import autoImg from '@/assets/auto.png';
+import logistcImg from '@/assets/logistc.png';
+import admImg from '@/assets/adm.png';
+
 const projects = [
   {
     id: 1,
@@ -19,7 +24,7 @@ const projects = [
       { uz: 'CRM', en: 'CRM', ru: 'CRM' }
     ],
     tech: ['React', 'TypeScript', 'Tailwind', "Node.js"],
-    image: "./src/assets/logcrm.png",
+    image: logcrmImg,
     demo: 'https://github.com/uzb0104',
     code: 'https://github.com/uzb0104'
   },
@@ -39,7 +44,7 @@ const projects = [
       { uz: 'Mobilga mos', en: 'Mobile ready', ru: 'Мобильная версия' }
     ],
     tech: ['React', 'JavaScript', 'REST APIs', " Supabase", 'Responsive UI'],
-    image: './src/assets/auto.png',
+    image: autoImg,
     demo: 'https://github.com/uzb0104',
     code: 'https://github.com/uzb0104'
   },
@@ -59,7 +64,7 @@ const projects = [
       { uz: 'Maosh vositalari', en: 'Salary tools', ru: 'Инструменты зарплаты' }
     ],
     tech: ['React', 'TypeScript', 'REST APIs', 'Tailwind CSS', 'Supabase'],
-    image: './src/assets/logistc.png',
+    image: logistcImg,
     demo: 'https://fastlink-hub.vercel.app/',
     code: 'https://github.com/uzb0104'
   },
@@ -79,7 +84,7 @@ const projects = [
       { uz: 'Xisobotlar va statistika', en: 'Reports and statistics', ru: 'Отчеты и статистика' }
     ],
     tech: ['React', ' TailwindCSS', 'TypeScript', 'Rest APIs', 'Supabase'],
-    image: './src/assets/adm.png',
+    image: admImg,
     demo: ' https://adm-system-employee.vercel.app/',
     code: 'https://github.com/uzb0104'
   }
