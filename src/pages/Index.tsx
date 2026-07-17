@@ -6,20 +6,35 @@ import { About } from '@/components/About';
 import { Contact } from '@/components/Contact';
 import { Footer } from '@/components/Footer';
 import { LanguageProvider } from '@/contexts/LanguageContext';
+import { ScrollReveal } from '@/components/ScrollReveal';
+import { BackToTop } from '@/components/BackToTop';
 
 const Index = () => {
   return (
     <LanguageProvider>
-      <div className="min-h-screen">
+      <div className="min-h-screen relative overflow-hidden bg-background">
         <Header />
         <main>
           <Hero />
-          <Projects />
+          
+          <ScrollReveal animation="fade-up">
+            <Projects />
+          </ScrollReveal>
+          
           <Skills />
-          <About />
-          <Contact />
+          
+          <ScrollReveal animation="fade-up">
+            <About />
+          </ScrollReveal>
+          
+          <ScrollReveal animation="fade-up">
+            <Contact />
+          </ScrollReveal>
         </main>
         <Footer />
+        
+        {/* Floating Back to Top Button */}
+        <BackToTop />
       </div>
     </LanguageProvider>
   );

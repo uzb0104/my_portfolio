@@ -18,21 +18,21 @@ export const Footer = () => {
               className="p-2 rounded-full hover:bg-accent transition-colors">
               <Linkedin className="h-5 w-5" />
             </a>
-            <a href="https://t.me/a_omonov01" target="_blank" rel="noopener noreferrer"
+            <a href="https://t.me/abbosbekomonov" target="_blank" rel="noopener noreferrer"
               className="p-2 rounded-full hover:bg-accent transition-colors">
               <Send className="h-5 w-5" />
             </a>
-            <a href="https://www.instagram.com/omonov_abbosbek?igsh=MXByb3VuanhncmxscQ==" target="_blank" rel="noopener noreferrer"
+            {/* <a href="https://www.instagram.com/omonov_abbosbek?igsh=MXByb3VuanhncmxscQ==" target="_blank" rel="noopener noreferrer"
               className="p-2 rounded-full hover:bg-accent transition-colors">
               <Instagram className="h-5 w-5" />
-            </a>
+            </a> */}
           </div>
 
           <p className="text-sm text-muted-foreground text-center">
-            © {currentYear} {t({
-              uz: "Barcha huquqlar himoyalangan",
-              en: "All rights reserved",
-              ru: "Все права защищены"
+            ©  {t({
+              uz: " 2025 Barcha huquqlar himoyalangan",
+              en: " 2025 All rights reserved",
+              ru: " 2025 Все права защищены"
             })}
           </p>
         </div>
